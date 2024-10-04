@@ -44,7 +44,7 @@ public class EnemyManager : MonoBehaviour
 
     }
 
-    private void DestroyAllEnemies()
+    public void DestroyAllEnemies()
     {
         foreach (Transform e in enemiesParent)
             Destroy(e.gameObject);

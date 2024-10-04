@@ -80,6 +80,8 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
+        anim.SetTrigger("Shoot");
+        
         var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
         muzzleGo.transform.SetParent(transform);
         Destroy(muzzleGo, 0.05f);

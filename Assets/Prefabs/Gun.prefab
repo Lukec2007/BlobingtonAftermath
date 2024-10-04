@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1692994035874812467
 Transform:
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 881541403413640495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.064, y: -1.052, z: 10.119385}
+  m_LocalPosition: {x: 0.84, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1078240453
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1910782600, guid: 9c65d79e1f8d9a3439503a99fdb6f22e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6303518217966661290
 Transform:
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 1381307772489774533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.574, y: -0.959, z: 10.119385}
+  m_LocalPosition: {x: 1.76, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,12 +125,13 @@ GameObject:
   m_Component:
   - component: {fileID: 399113013445619688}
   - component: {fileID: 1649491609941766389}
+  - component: {fileID: 2341424913574144426}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &399113013445619688
 Transform:
@@ -141,8 +142,8 @@ Transform:
   m_GameObject: {fileID: 8811049523285761939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.279, y: 1.028, z: -10.119385}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.436, y: 0.804, z: -10.119385}
+  m_LocalScale: {x: 0.9090103, y: 0.9090103, z: 0.9090103}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1692994035874812467}
@@ -163,6 +164,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzle: {fileID: 1305444801055595854, guid: 964a549e17c30cf438af30f665cea84e, type: 3}
   muzzlePosition: {fileID: 6303518217966661290}
-  projectile: {fileID: 0}
-  fireDistance: 10
+  projectile: {fileID: 923712145599851584, guid: 1f39fc16eaedc934fa22ed32f18606cd, type: 3}
+  fireDistance: 5
   fireRate: 0.5
+--- !u!95 &2341424913574144426
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811049523285761939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82cbfa6c200314441ba0d14121cd443e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

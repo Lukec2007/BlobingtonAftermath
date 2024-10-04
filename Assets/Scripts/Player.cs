@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI healthText;
+    [SerializeField] TextMeshProUGUI HealthText;
 
     Animator anim;
     Rigidbody2D rb;
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         currentHealth = maxHealth;
-        healthText.text = maxHealth.ToString();
+        HealthText.text = maxHealth.ToString();
     }
 
     private void Update()
@@ -70,7 +70,7 @@ private void FixedUpdate()
     {
         anim.SetTrigger("hit");
         currentHealth -= damage;
-        healthText.text = Mathf.Clamp(currentHealth, 0, maxHealth).ToString();
+        HealthText.text = Mathf.Clamp(currentHealth, 0, maxHealth).ToString();
 
         if (currentHealth <= 0)
             Die();
