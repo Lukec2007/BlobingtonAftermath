@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunManager : MonoBehaviour
 {
-    [SerializeField] GameObject gunPrefab ;
+    [SerializeField] GameObject Gun ;
 
     Transform player;
     List<Vector2> gunPositions = new List<Vector2>();
@@ -15,14 +15,13 @@ public class GunManager : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
 
-        gunPositions.Add(new Vector2(-1.2f, 1f));
-        gunPositions.Add(new Vector2(1.2f, 1f));
-
-        gunPositions.Add(new Vector2(-1.4f, 0.2f));
-        gunPositions.Add(new Vector2(1.4f, 0.2f));
-
-        gunPositions.Add(new Vector2(-1f, -0.5f));
-        gunPositions.Add(new Vector2(1f, -0.5f));
+        gunPositions.Add(new Vector2(0.8f, 0.5f));
+        gunPositions.Add(new Vector2(1f, -0.38f));
+        gunPositions.Add(new Vector2(0.8f, -1.24f));
+        
+        gunPositions.Add(new Vector2(-1.8f, 0.5f));
+        gunPositions.Add(new Vector2(-2f, -0.38f));
+        gunPositions.Add(new Vector2(-1.8f, -1.24f));
 
         AddGun();
         AddGun();
@@ -33,14 +32,21 @@ public class GunManager : MonoBehaviour
     {
         // for testing
         if (Input.GetKeyDown(KeyCode.G))
-            AddGun();
+        { 
+            if (spawnedGuns < 6)
+            {
+                AddGun();
+            }
+           
+        }
+           
     }
 
     void AddGun()
     {
         var pos = gunPositions[spawnedGuns];
 
-        var newGun = Instantiate(gunPrefab, pos, Quaternion.identity);
+        var newGun = Instantiate(Gun, pos, Quaternion.identity);
 
         newGun.GetComponent<Gun>().SetOffset(pos);
         spawnedGuns++;

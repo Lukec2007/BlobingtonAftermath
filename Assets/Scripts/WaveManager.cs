@@ -22,8 +22,20 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         StartNewWave();
+        timeText.text = "30";
+        waveText.text = "Wave: 1";
     }
 
+    private void Update()
+    {
+        // for testin
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartNewWave();
+        }
+    }
+
+    public bool WaveRunning() => waveRunning;
     private void StartNewWave()
     {
         timeText.color = Color.white;

@@ -79,6 +79,7 @@ private void FixedUpdate()
     void Die()
     {
         dead = true;
+        GameManager.instance.GameOver();
     }
 
 }

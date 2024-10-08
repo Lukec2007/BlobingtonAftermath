@@ -62,7 +62,7 @@ public class Gun : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             transform.rotation = Quaternion.Euler(0, 0, angle);
-            transform.position = (Vector2)player.position + offset;
+            // transform.position = (Vector2)player.position + offset;
         }
     }
 
