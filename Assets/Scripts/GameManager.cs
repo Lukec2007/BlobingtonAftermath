@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-     void Awake()
+    void Awake()
     {
        if (instance == null)
         {

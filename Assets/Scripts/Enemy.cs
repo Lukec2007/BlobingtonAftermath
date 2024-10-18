@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
                 Vector2.Distance(transform.position, target.position) < distanceToCharge)
             {
                 isPreparingCharge = true;
-                Invoke("StartCharing", prepareTime);
+                Invoke("StartCharging", prepareTime);
             }
         }
 
